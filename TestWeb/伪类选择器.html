@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        ul>li:first-of-type{
+            color:red ;
+        }
+        a:link{
+            color:pink ;
+            font-size:50px;
+        }
+        a:visited{
+            color: blue ;
+        }
+        a:hover{
+            color:chartreuse;
+        }
+        p{
+            font-size: 30px;
+        }
+        p::first-letter{
+            font-size: 50px;
+            color: chartreuse;
+        }
+        .box{
+            width: 700px;
+            height: 100px;
+            color:red;
+            background-color: #bfa;
+            border-style: solid;
+        }
+        .inner1{
+            width:100px ;
+            height:100px ;
+            background-color: burlywood;
+            margin-left: 100px;
+        }
+        
+    </style>
+</head>
+<body>
+    <ul>
+        <span>span1</span>
+        <li>第一栏</li>
+        <li>第二栏</li>
+        <li>第三栏</li>
+        <span>span2</span>
+        <li>第四栏</li>
+        <li>第五栏</li>
+    </ul>
+    <a class = a1 href = "https://www.baidu.com">baidu</a>
+    <a class = a2 href = "https://www.bilibili.com">bilibili</a>
+    <div class="box">
+        <div class="inner1"></div>
+    </div>
+</body>
+</html>

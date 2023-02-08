@@ -1,0 +1,157 @@
+h1 {
+  border: 1px solid #df9494;
+  height: auto;
+}
+
+div {
+  height: 100px;
+}
+
+div ul {
+  height: 80px;
+}
+
+div ul li {
+  height: 50px;
+}
+
+div ul li:hover {
+  color: #000;
+}
+
+div {
+  height: 100px;
+}
+
+div ul {
+  height: 80px;
+}
+
+div ul li {
+  height: 50px;
+}
+
+div ul li:hover {
+  color: #000;
+}
+
+div {
+  height: 100px;
+  font-family: 'fansong';
+  font-size: 20px;
+  font-weight: 700;
+}
+
+div {
+  color: red;
+}
+
+div a {
+  font-size: 12px;
+}
+
+div {
+  color: red;
+}
+
+div a {
+  color: red;
+  font-size: 15px;
+}
+
+div {
+  color: red;
+}
+
+div a {
+  color: red;
+  font-size: 15px;
+}
+
+.one, .two {
+  color: #000;
+}
+
+.one a, .two a {
+  font-size: 10px;
+}
+
+.two {
+  background-color: #fff;
+}
+
+.boxes {
+  height: 100px;
+}
+
+.boxes ul {
+  height: 80px;
+}
+
+.boxes ul li {
+  height: 50px;
+}
+
+.boxes ul li:hover {
+  color: #000;
+}
+
+body {
+  margin: 20px;
+  left: 40px;
+}
+
+body {
+  background-color: #3d2b29;
+  color: #5f1717;
+  border-color: #521a14;
+}
+
+body {
+  color: red;
+}
+
+body {
+  background-color: black;
+}
+
+.div1 {
+  height: 20px;
+}
+
+.div2 {
+  height: 40px;
+}
+
+.div3 {
+  height: 60px;
+}
+
+.divred {
+  color: red;
+}
+
+.divblue {
+  color: blue;
+}
+
+.divblack {
+  color: black;
+}
+
+.div1 {
+  height: 10px;
+}
+
+.div2 {
+  height: 20px;
+}
+
+.div3 {
+  height: 30px;
+}
+
+.div {
+  width: 15px;
+}
+/*# sourceMappingURL=test_of_sass.css.map */

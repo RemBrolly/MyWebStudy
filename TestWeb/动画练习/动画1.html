@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>动画1</title>
+    <style>
+        @keyframes gorunning{
+            from{
+                background-position: 0 0 ;
+            }
+            to{
+                background-position: -500px 0px ;
+            }
+        }
+        @keyframes miturun{
+            from{
+                background-position: 0 0 ;
+            }
+            to{
+                background-position: -528px 0 ;
+            }
+        }
+        div.gorun{
+            width: 100px;
+            height: 100px;
+            background-image: url(../img/trump_run.png);
+            animation-name: gorunning;
+            animation-duration: 0.5s;
+            animation-iteration-count: infinite;
+            animation-timing-function: steps(5);
+        }
+        div.mitu{
+            width: 132px;
+            height: 271px;
+            background-image: url("../img/bigtap-mitu-queue-big.png");
+            margin: 50px auto;
+            animation:miturun steps(4) infinite 0.8s ;
+        }
+    </style>
+</head>
+<body>
+    <div class="gorun">
+        
+    </div>
+    <div class="mitu"></div>
+</body>
+</html>

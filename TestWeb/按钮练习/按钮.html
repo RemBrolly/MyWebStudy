@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>按钮</title>
+    <link rel="stylesheet" href="../icon/fontawesome-free-5.15.4-web/css/all.css">
+    <style>
+        /* 一个简单的按钮示例，但是使用该方法会存在一定问题，浏览器加载三张图片
+        时只有在特定的事件发生时才会加载，所以第一次使用该按钮时会出现闪一下的情况*/
+        .box1{
+            width: 93px;
+            height: 29px;
+            background: url("../img/button_link.png");
+        }
+        .box:hover{
+            background-image: url("../img/button_hover.png");
+        }
+        .box:active{
+            background-image: url("../img/button_active.png");
+        }
+        /* 正确的按钮设计方法，使用雪碧图，事件发生时使图片移动即可 */
+        div.box2{
+            width: 93px;
+            height: 29px;
+            background: url("../img/button_btn.png");
+        }
+        .box2:hover{
+            background-position: -93px 0 ;
+        }
+        .box2:active{
+            background-position: -186px 0 ;
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="box1"></div>
+    <div class="box2"></div>
+</body>
+</html>

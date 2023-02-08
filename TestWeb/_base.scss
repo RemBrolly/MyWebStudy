@@ -1,0 +1,15 @@
+// 这个文件的名字是以下划线开头的，说明该文件不会被转换成css代码
+// 所以这种一下划线开头的文件常作为被别的scss文件引用的对象
+
+.boxes{
+    height: 100px;
+    ul{
+        height: 80px;
+        li{
+            height: 50px;
+            &:hover{ //这里转换为 li:hover
+                color:#000;
+            }
+        }
+    }
+}

@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>网易新闻列表</title>
+    <link rel="stylesheet" href="../reset.css">
+    <style>
+        /* 设置页面背景颜色以便观察 */
+        body{
+            background-color: #bfa;
+        }
+        /* 统一设置超链接去除下划线 */
+        a{
+            text-decoration: none;
+        }
+        /* 统一设置超链接鼠标移入时的颜色 */
+        a:hover{
+            color: #C81623;
+        }
+        /* 设置最底层盒子的样式 */
+        div.box{
+            /* 设置盒子宽度 */
+            width: 300px;
+            /* 设置盒子高度 */
+            height: 324px;
+            /* 设置盒子上外边距 */
+            margin-top: 35px;
+            /* 将整个盒子居中以便观察 */
+            margin-left: auto;
+            margin-right: auto;
+            /* 设置盒子背景颜色 */
+            background-color: #fff;
+        }
+        /* 设置最开头的标题样式 */
+        div.title{
+            /* 设置标题底层盒子的高度 */
+            height: 41px;
+            /* 给标题盒子增加一个灰色的的上边框（视觉上是一条灰色的线） */
+            border-top: 1px #DDDDDD solid;
+            /* 设置line-height让标题文字位于盒子的垂直中央 */
+            line-height: 41px;
+        }
+        /* 设置标题文字盒子的样式 */
+        h2.title{
+            /* 设置盒子宽度（以此来设置该盒子上边框（也就是那条红线）的宽度） */
+            width: 78.800px;
+            /* 给盒子增加一个边框并添加颜色（视觉上就是那一条红线） */
+            border-top: 1px #F34540 solid;
+            /* 将该盒子上移一个像素盖住上面那条灰色的线，这样整体这条线就是红灰色的了 */
+            margin-top: -1px;
+        }
+        /* 设置标题中那个点符号的样式 */
+        h2 i{
+            /* 符号字体大小 */
+            font-size: 1px;
+            /* 符号颜色 */
+            color: #888;
+        }
+        /* 设置标题文字样式 */
+        h2 a{
+            /* 标题文字大小 */
+            font-size: 16px;
+            /* 标题文字颜色 */
+            color: #404040;
+            /* 给标题文字加粗 */
+            font-weight: bold;
+
+        }
+        /* 设置新闻图片上的文字样式 */
+        div.h3{
+            /* 增加负的上外边距让文字上移至图片中合适位置 */
+            margin-top: -30px;
+            /* 增加下外边距让该图片标题文字与下面的元素有一定的距离 */
+            margin-bottom: 20px;
+            /* 增加左外边距将文字右移至合适位置 */
+            margin-left: 40px;
+            /* 文字颜色 */
+            color: #fff;
+            /* 文字加粗 */
+            font-weight: bold;
+        }
+        /* 最后四行新闻概括的文字样式 */
+        ul li{
+            /* 限定宽度 */
+            width: 285px;
+            /* 限定高度 */
+            height: 30px;
+            /* 整体右移 */
+            padding-left: 15px;
+            /* 文字大小 */
+            font-size: 14px;
+            /* 让文字垂直居中 */
+            line-height: 30px;
+            /* 文字颜色 */
+            color: #666;
+        }
+        /* 每行文字前的那个点符号的样式 */
+        li i{
+            /* 颜色 */
+            color: #DDDDDD;
+            /* 增加做外边距负值让其左移与图片 */
+            margin-left: -13px;
+            /* 增加右内边距使该符号和文字之间有些许空间 */
+            padding-right: 6px;
+        }
+        ul li a{
+            /* 修改链接文字颜色 */
+            color: #666;
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <div class="title">
+            <h2 class="title">
+                <a href="javascript:;">军事</a>
+                <i>▪</i>
+                <a href="javascript:;">航空</a>
+            </h2>
+        </div>
+        <div class="img">
+            <a href="javascript:;" class="img">
+                <img src="../img/网易新闻列表.webp" alt="新闻概况图片">
+                <div class="h3">
+                    <h3>法国陆军步兵旅还在使用骡子</h3>
+                </div>
+            </a>
+        </div>
+        <ul class="word">
+            <li>
+                <i>▪</i>
+                <a href="javascript:;">阿富汗塔利班士兵用美军装备穿美军制服</a>
+            </li>
+            <li>
+                <i>▪</i>
+                <a href="javascript:;">朝鲜收起坦克导弹 拖拉机火箭炮成亮点</a>
+            </li>
+            <li>
+                <i>▪</i>
+                <a href="javascript:;">阿富汗塔利班接管后 喀布尔首架国际航班起</a>
+            </li>
+            <li>
+                <i>▪</i>
+                <a href="javascript:;">航拍雄安新区悦容公园</a>
+            </li>
+        </ul>
+    </div>
+</body>
+</html>

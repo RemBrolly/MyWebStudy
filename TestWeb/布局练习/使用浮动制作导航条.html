@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>导航条</title>
+    <link rel="stylesheet" href="../reset.css">
+    <style>
+        /* 设置导航条底层盒子样式 */
+        div.nav{
+            /* 设置宽度 */
+            width: 1191px;
+            /* 设置高度 */
+            height: 47px;
+            /* 设置背景色 */
+            background-color: #E8E7E3;
+            /* 整体水平居中并与最上边有一定边距 */
+            margin: 100px auto;
+        }
+        /* 设置每一栏标题样式 */
+        div.nav1{
+            /* 设置字体颜色 */
+            color: #777777;
+            /* 设置字体大小 */
+            font-size: large;
+            /* 设置为向左浮动 */
+            float: left;
+            /* 为每一个设置左右内边距 */
+            padding: 0  38px;
+            /* 在父元素内垂直居中 */
+            line-height: 47px;
+        }
+        /* 设置鼠标移至时的效果 */
+        div.nav1:hover{
+            /* 鼠标移入时字体变为白色 */
+            color: #DBDAD6;
+            /* 鼠标移入时标题框变色 */
+            background-color: #3F3F3F;
+        }
+        div.box{
+            width: 200px;
+            height: 200px;
+            background-color: red;
+        }
+        div.box1{
+            width: 100px;
+            height: 100px;
+            background-color:teal;
+            margin-top: 50px;
+        }
+        .clearfix::before,.clearfix::after{
+            content:'';
+            display:table ;
+            clear:both;
+        }
+    </style>
+</head>
+<body>
+    <div class="nav">
+        <a href="javascript:;">
+            <div class="nav1">HTML/CSS</div>
+        </a>
+        <a href="javascript:;">
+            <div class="nav1">Browser Side</div>
+        </a>
+        <a href="javascript:;">
+            <div class="nav1">Server Side</div>
+        </a>
+        <a href="javascript:;">
+            <div class="nav1">Programming</div>
+        </a>
+        <a href="javascript:;">
+            <div class="nav1">XML</div>
+        </a>
+        <a href="javascript:;">
+            <div class="nav1">Web Buliding</div>
+        </a>
+        <a href="javascript:;">
+            <div class="nav1">Reference</div>
+        </a>   
+    </div>
+    <div class="box clearfix">
+        <div class="box1 ">
+
+        </div>
+    </div>
+</body>
+</html>

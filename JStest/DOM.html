@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style class = 'style1'>
+        .begin{
+            height: 100px;
+            width: 100px;
+            background: #bfa;
+        }
+    </style>
+</head>
+<body>
+<div class = 'begin' >Begin</div>
+<ul>
+    <li>Information</li>
+</ul>
+<div class="end" id="end">
+    End
+    <ul class='ends'></ul>
+</div>
+<a class="end" id="end1" href="javascript:">
+    End1
+    <div class='ends'></div>
+</a>
+<div class="end" id="end2">
+    End2
+<div class='ends'></div>
+</div>
+<button class="btn" id = 'myBtn'>Btn</button>
+<br>
+<!--脚本部分-->
+<script>
+    /*
+    setTimeout(() => {
+        for (let i = 0; i < document.body.childNodes.length; i++) {
+            alert(document.body.childNodes[i]); // Text, DIV, Text, UL, ..., SCRIPT
+        }
+    }, 3000); //使用延时函 数来让弹窗延时弹出，因为使用弹窗函数会阻止当前的文档的执行
+    */
+
+    /*
+    // alert(document.body.childNodes[6].nodeName) ; //使用中括号遍历childNodes类数组
+    // alert(document.nodeType) ; //document类型节点在Node节点中属于第9种节点
+    // alert(document.domain) ; //获取页面的域名
+    // document.write ('<div>add_new</div> outside of div') ; //在页面渲染期间向页面添加文本内容
+    */
+
+    /*
+   let div = document.getElementById("end") ; //获取一个Element类型的节点元素命名为div
+   alert(div.className) ; //输出该元素的class属性
+   alert(div.id); //获取该元素的id属性
+   alert(div.getAttribute('class')) ; //使用方法获取元素属性值
+   */
+
+    /*
+    //获取id为end的div元素的文本内容并赋值给divText
+    let divText = document.getElementById('end').childNodes[0];
+    //通过nodeValue属性修改文本内容，可以通过浏览器页面的显示内容可以看到内容已修改
+    divText.nodeValue = 'fix end , see here ';
+    */
+
+    /*
+    let selected = document.getElementById('end') ; //获取一个div元素
+    alert(selected.querySelector('.ends').nodeName) ; //通过CSS选择器获取该元素的指定子元素
+    let select  = document.querySelector('.end') ; //通过CSS选择器获取全局中第一个匹配的指定元素
+    alert(select.className) ;
+    */
+
+    /*
+    //通过类名来获取DOM中所有匹配的元素，并返回一个NodeList（类数组）
+    let CSS_class = document.getElementsByClassName('end');
+    for (const cssClass of CSS_class) { //使用迭代循环来遍历类数组以输出
+        alert(cssClass.nodeName);
+    }
+    */
+
+/*
+    let beginDiv = document.querySelector('.begin') ; //获取元素
+    beginDiv.style.backgroundColor = 'blue' ; //修改元素的style属性
+    beginDiv.style.display = 'none' ; //先隐藏该块元素
+    //让其延迟三秒后显示，将display设置为空字符串相当于使用其默认值
+    setTimeout(()=> beginDiv.style.display = '' , 3000 ) ;
+    alert(document.styleSheets[0].disabled);
+*/
+
+/*
+    //DMO0事件处理程序：
+    let btn = document.getElementById('myBtn') ;
+    btn.onclick = function (){  //注意DOM0的事件名都会带一个前缀on
+        alert(this.nodeName) ;
+    }
+*/
+
+/*
+    //DOM2事件处理程序：
+    let btn = document.getElementById('myBtn') ; //获取按钮元素
+    let handler = function (){  //设置事件函数
+        alert(this.nodeName) ;
+    }
+    btn.addEventListener("click" , handler , false ) ; //为按钮设置事件处理程序
+    btn.removeEventListener("click" , handler , false ) ; //移除按钮的事件处理程序
+*/
+
+    window.addEventListener('load' , ()=> {
+        alert('window is loaded')
+    }) ;
+    let btnLoad = document.getElementById('myBtn') ;
+    btnLoad.addEventListener('click' , function(){
+        alert('button is loaded') ;
+    })
+
+
+
+</script>
+...more stuff...
+</body>
+</html>

@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 通过标签的class属性来修改样式 */
+        .p1{
+            color :pink ;
+            font-size:50px ;
+        }
+        /* 使用交集选择器来修改样式 */
+        h2.blue{
+            color:blue ;
+            font-size: 45px ;
+        }
+        /* 使用并集选择器修改样式 */
+        h3.blue,h4{
+            color:chocolate ;
+            font-size:70px ;
+        }
+        div.box1{
+            width: 100px;
+            height: 100px;
+            background-color: blue;
+            border-radius: 88%;
+        }
+        div.box2{
+            width: 400px;
+            height: 400px;
+            background-color: red
+        }
+        div.box31{
+            width: 100px;
+            height: 100px;
+            background-color: rgb(65, 65, 119);
+            float: right;
+        }
+        div.box32{
+            width: 100px;
+            height: 100px;
+            background-color: rgb(25, 25, 39);
+            float: right;
+        }
+        div.box33{
+            width: 100px;
+            height: 100px;
+            background-color: rgb(133, 133, 143);
+            float: left;
+        }
+        div.box34{
+            width: 100px;
+            height: 100px;
+            background-color: rgb(215, 215, 236);
+            float: left;
+        }
+        div.box35{
+            width: 100px;
+            height: 100px;
+            background-color: blue;
+            float: right;
+        }
+    </style>
+</head>
+<body>
+    <!-- 通过修改标签的style属性值来修改样式 -->
+    <p style = "color: rgb(255, 0, 0) ; font-size: 60px"> PPCH YYDS </p>
+    <!-- 通过标签的class属性来修改样式 -->
+    <p class = "p1" > PPCH YYDS !</p>
+    <!-- 使用交集选择器来修改样式 -->
+    <h1 class = "blue" >  PPCH1 </h1>
+    <h2 class = "blue" >  PPCH2 </h2>
+    <!-- 使用并集选择器修改样式 -->
+    <h3 class = "blue" >  PPCH3 </h1>
+    <h4 class = "red" >  PPCH4 </h2>
+    <div class="box1">
+
+    </div>
+    <div class="box2">
+        <div class="box31">
+
+        </div>
+        <div class="box32">
+
+        </div>
+        <div class="box33">
+
+        </div>
+        <div class="box34">
+
+        </div>
+        <div class="box35">
+
+        </div>
+
+    </div>
+</body>
+</html>

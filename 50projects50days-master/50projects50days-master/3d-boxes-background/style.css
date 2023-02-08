@@ -1,0 +1,96 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+* {
+  box-sizing: border-box;  /*设置全局样式，修改全局盒子尺寸计算方式为border—box*/
+}
+
+/*设置整体页面的样式*/
+body {
+  background-color: #fafafa;
+  font-family: 'Roboto', sans-serif;
+  display: flex;  /*为整个页面开启弹性盒*/
+  flex-direction: column;  /*弹性元素在容器中纵向排列*/
+  align-items: center;  /*弹性元素在辅轴中居中对齐*/
+  justify-content: center;  /*弹性元素在主轴中居中排列*/
+  height: 100vh;  /*viewpoint height 视窗高度为100vh，即满视口高度*/
+  overflow: hidden; /*设置页面溢出的部分会被隐藏*/
+}
+
+/*设置按钮的样式*/
+.magic {
+  background-color: #f9ca24; /*按钮背景色*/
+  color: #fff;  /*按钮字体颜色*/
+  font-family: 'Poppins', sans-serif; /*字体族*/
+  border: 0; /*边框大小为0*/
+  border-radius: 3px; /*圆角边框*/
+  font-size: 16px; /*字体大小*/
+  padding: 12px 20px; /*内边距*/
+  cursor: pointer; /*设置鼠标光标样式*/
+  position: fixed; /*开启固定定位*/
+  top: 20px; /*偏移量*/
+  letter-spacing: 1px; /*设置字符的水平间距*/
+  box-shadow: 0 3px rgba(249, 202, 36, 0.5); /*设置阴影*/
+  z-index: 100; /*将按钮置于页面最上层*/
+}
+
+.magic:focus {  /*按钮获得焦点时的行为*/
+  outline: none; /*取消轮廓*/
+}
+
+.magic:active { /*按钮被点击时的行为*/
+  box-shadow: none; /*取消阴影，可以实现按钮点击的效果*/
+  transform: translateY(2px); /*当按钮被点击时按钮延Y轴平移，可以实现按钮点击的效果*/
+}
+
+.boxes {  /*设置图片盒子的样式*/
+  display: flex;  /*开启弹性盒*/
+  flex-wrap: wrap; /*弹性元素会沿主轴方向自动换行*/
+  justify-content: space-around; /*主轴中空白部分会分布到弹性元素两侧*/
+  height: 500px; /*高*/
+  width: 500px; /*宽*/
+  position: relative; /*相对定位*/
+  transition: 0.4s ease; /*设置动画过渡时间为0.4s，使用默认方式ease过渡*/
+}
+
+.boxes.big {
+  width: 600px; /*覆盖宽高*/
+  height: 600px;
+}
+
+.boxes.big .box {
+  transform: rotateZ(360deg); /*沿Z轴旋转360度*/
+}
+
+/*设置大盒子被分割成小盒子后每个小盒子的样式*/
+.box {
+  background-image: url('https://media.giphy.com/media/EZqwsBSPlvSda/giphy.gif'); /*添加背景图片*/
+  background-repeat: no-repeat; /*背景图片重复方式：不重复*/
+  background-size: 500px 500px; /*背景图片大小*/
+  position: relative; /*相对定位*/
+  height: 125px; /*小盒子宽高*/
+  width: 125px;
+  transition: 0.4s ease; /*过渡*/
+}
+
+.box::after {  /*每个小盒子右侧边的样式，伪元素添加*/
+  content: '';  /*添加空内容*/
+  background-color: #f6e58d; /*设置背景色*/
+  position: absolute; /*开启绝对定位*/
+  top: 8px; /*设置偏移量*/
+  right: -15px;
+  height: 100%;
+  width: 15px;
+  transform: skewY(45deg); /*元素沿Y轴形状变为斜型*/
+}
+
+.box::before {  /*每个小盒子底部侧边样式*/
+  content: '';
+  background-color: #f9ca24;
+  position: absolute;
+  bottom: -15px;
+  left: 8px;
+  height: 15px;
+  width: 100%;
+  transform: skewX(45deg);
+}

@@ -1,0 +1,484 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>top navigation bars</title>
+    <!-- 引入重置样式表 -->
+    <link rel="stylesheet" href="../reset.css">
+    <!-- 引入图标字体 -->
+    <link rel="stylesheet" href="../icon/iconfont/iconfont.css">
+    <style>
+        /* 该练习写的比较烂而且不简洁，就不做注释了，简单看一下应该也能看懂的 */
+        body {
+            background-color: #bfa;
+        }
+
+        div.nav {
+            width: 100%;
+            background-color: #E3E4E5;
+            margin: 80px auto;
+            height: 30px;
+            line-height: 30px;
+            font-size: 12px;
+            color: #999;
+        }
+
+        a {
+            text-decoration: none;
+            color: #999;
+        }
+
+        a:hover {
+            color: red;
+        }
+
+        .icon-map-filling {
+            font-size: 12px;
+            color: red;
+        }
+
+        .icon-arrow-down {
+            font-size: 1px;
+        }
+
+        div.location {
+            float: left;
+            margin-left: 165px;
+            padding: 0 8px;
+            height: 30px;
+            width: 41px;
+            overflow: hidden;
+        }
+        div.overflower1{
+            width: 320px;
+            height:460px;
+            background-color: white;
+            position: relative;
+            top: 1px;
+            left: -8px;
+        }
+        ul.loca1 a{
+            margin: 10px;
+            padding: 5px;
+        }
+        ul.loca1 a:hover{
+            background-color: rgb(230, 227, 227,.5);
+        }
+        ul.loca2 a,span.loca{
+            margin: 10px;
+            margin-right: 80px;
+        }
+        ul.loca3 a{
+            margin: 10px;
+            
+        }
+
+        li.pulldown{
+            overflow: hidden;
+            width: 63.6px;
+            height: 30px;
+        }
+
+        div.overflower2 {
+            width:200px;
+            height: 150px;
+            background-color:white;
+            position: relative;
+            top:1px;
+            left: -7px;
+        }
+        div.overflower3 {
+            width: 200px;
+            height: 160px;
+            background-color: white;
+            position: relative;
+            top:1px;
+            left: -7px;
+        }
+        div.overflower4 {
+            width: 200px;
+            height: 300px;
+            background-color: white;
+            position: relative;
+            top:1px;
+            left: -7px;
+        }
+        div.overflower5 {
+            width: 1200px;
+            height: 200px;
+            background-color: white;
+            position: relative;
+            top:1px;
+            right: 1060px;
+        }
+        ul.flow a{
+            margin: 10px;
+        }
+
+        .pulldown:hover{
+            background-color: white;
+            overflow: visible;
+        }
+
+        /* ul.loca1 li{
+            width: 100px;
+        } */
+
+
+
+        div.bars li {
+            float: left;
+            padding: 0 7px;
+        }
+
+        li.sign {
+            margin-left: 420px;
+            margin-right: 7px;
+        }
+
+        ul i {
+            float: left;
+            margin: 0 4px;
+        }
+
+        
+    </style>
+</head>
+
+<body>
+    <div class="nav ">
+        <div class="location pulldown">
+            <i class="iconfont icon-map-filling"></i>
+            <a href="javascript:;">天津</a>
+            <div class="overflower1">
+                <ul class="loca1">
+                    <li>
+                        <a href="javascript:;">北京</a>
+                        <a href="javascript:;">上海</a>
+                        <a href="javascript:;">天津</a>
+                        <a href="javascript:;">重庆</a>
+                        <a href="javascript:;">河北</a>
+                    </li>
+                    <li>
+                        <a href="javascript:;">山西</a>
+                        <a href="javascript:;">河南</a>
+                        <a href="javascript:;">辽宁</a>
+                        <a href="javascript:;">吉林</a>
+                        <a href="javascript:;">黑龙江</a>
+                    </li>
+                    <li>
+                        <a href="javascript:;" style="margin-right: -3px;">内蒙古</a>
+                        <a href="javascript:;">江苏</a>
+                        <a href="javascript:;">山东</a>
+                        <a href="javascript:;">安徽</a>
+                        <a href="javascript:;">浙江</a>
+                    </li>
+                    <li>
+                        <a href="javascript:;">福建</a>
+                        <a href="javascript:;">湖北</a>
+                        <a href="javascript:;">湖南</a>
+                        <a href="javascript:;">广东</a>
+                        <a href="javascript:;">广西</a>
+                    </li>
+                    <li>
+                        <a href="javascript:;">江西</a>
+                        <a href="javascript:;">四川</a>
+                        <a href="javascript:;">海南</a>
+                        <a href="javascript:;">贵州</a>
+                        <a href="javascript:;">云南</a>
+                    </li>
+                    <li>
+                        <a href="javascript:;">西藏</a>
+                        <a href="javascript:;">陕西</a>
+                        <a href="javascript:;">甘肃</a>
+                        <a href="javascript:;">青海</a>
+                        <a href="javascript:;">宁夏</a>
+                    </li>
+                    <li>
+                        <a href="javascript:;">新疆</a>
+                        <a href="javascript:;">港澳</a>
+                        <a href="javascript:;">台湾</a>
+                        <a href="javascript:;"style="margin-right: -3px;">钓鱼岛</a>
+                        <a href="javascript:;">海外</a>
+                    </li>
+                </ul>
+                <ul class="loca2">
+                    <li>
+                        <span class="loca">地区专享版本</span>
+                    </li>
+                    <li>
+                        <a href="javascript:;">中国港澳</a>
+                        <a href="javascript:;">中国台湾</a>
+                    </li>
+                    <li>
+                        <a href="javascript:;">京东全球</a>
+                    </li>
+                </ul>
+                <ul class="loca3">
+                    <li>
+                        <span class="loca">Available Sites</span>
+                    </li>
+                    <li>
+                        <a href="javascript:;">Global Site</a>
+                        <a href="javascript:;">Cant Poccnn</a>
+                    </li>
+                    <li>
+                        <a href="javascript:;">Situs Indonesia</a>
+                        <a href="javascript:;">Sitio de Espana</a>
+                    </li>
+                    <li>
+                        <a href="javascript:;">dfasdfsdafds</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="bars">
+            <ul>
+                <li class="sign">
+                    <a href="javscript:;">你好，请登录</a>
+                </li>
+                <li class="bar">
+                    <a href="javascript:;" style="color: red;">免费注册</a>
+                </li>
+                <i>|</i>
+                <li class="bar">
+                    <a href="javascript:;">我的订单</a>
+                </li>
+                <i>|</i>
+                <li class="pulldown">
+                    <a href="javscript:;">我的京东</a>
+                    <span class="iconfont icon-arrow-down"></span>
+                    <div class="overflower2">
+                        <ul class="flow">
+                            <li>
+                                <a href="javascript:;">待处理的订单</a>
+                                <a href="javascript:;">我的回答</a>
+                            </li>
+                            <li>
+                                <a href="javascript:;">返修退换货</a>
+                                <a href="javascript:;">我的关注</a>
+                            </li>
+                            <li>
+                                <a href="javascript:;">降价商品</a>
+                            </li>
+                            <li>
+                                <a href="javascript:;">我的京豆</a>
+                                <a href="javascript:;">我的优惠劵</a>
+                            </li>
+                            <li>
+                                <a href="javascript:;">我的白条</a>
+                                <a href="javascript:;">我的理财</a>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+                <i>|</i>
+                <li class="bar">
+                    <a href="javascript:;">京东会员</a>
+                </li>
+                <i>|</i>
+                <li class="pulldown">
+                    <a href="javascript:;" style="color: red;">企业采购</a>
+                    <span class="iconfont icon-arrow-down"></span>
+                    <div class="overflower3">
+                        <ul class="flow">
+                            <li>
+                                <a href="javascript:;">企业购</a>
+                                <a href="javascript:;">商用场景馆</a>
+                            </li>
+                            <li>
+                                <a href="javascript:;">工业品</a>
+                                <a href="javascript:;">丰客多商城</a>
+                            </li>
+                            <li>
+                                <a href="javascript:;">礼品卡</a>
+                                <a href="javascript:;">微信企业购</a>
+                            </li>
+                            <li>
+                                <a href="javascript:;">工品优选</a>
+                                <a href="javascript:;">京东锦礼</a>
+                            </li>
+                            <li>
+                                <a href="javascript:;">大中型企业采购</a>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+                <i>|</i>
+                <li class="pulldown">
+                    客户服务
+                    <span class="iconfont icon-arrow-down"></span>
+                    <div class="overflower4">
+                        <ul class="flow">
+                            <li>
+                                <span>客户</span>
+                            </li>
+                            <li>
+                                <a href="javascript:;">帮助中心</a>
+                                <a href="javascript:;">售后服务</a>
+                            </li>
+                            <li>
+                                <a href="javascript:;">在线客服</a>
+                                <a href="javascript:;">意见建议</a>
+                            </li>
+                            <li>
+                                <a href="javascript:;">电话客服</a>
+                                <a href="javascript:;">客服邮箱</a>
+                            </li>
+                            <li>
+                                <a href="javascript:;">金融资讯</a>
+                                <a href="javascript:;">全球售客服</a>
+                            </li>
+                            <li>
+                                <a href="javascript:;">企业客服</a>                            </li>
+                        </ul>
+                        <ul class="flow">
+                            <li>
+                                <span>商户</span>
+                            </li>
+                            <li>
+                                <a href="javascript:;">合作招商</a>
+                                <a href="javascript:;">成长中心</a>
+                            </li>
+                            <li>
+                                <a href="javascript:;">商家后台</a>
+                                <a href="javascript:;">京麦工作台</a>
+                            </li>
+                            <li>
+                                <a href="javascript:;">商家帮助</a>
+                                <a href="javascript:;">规则平台</a>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+                <i>|</i>
+                <li class="pulldown">
+                    网站导航
+                    <span class="iconfont icon-arrow-down"></span>
+                    <div class="overflower5">
+                        <ul class="flow">
+                            <li>
+                                <span>特色主题</span>
+                            </li>
+                            <li>
+                                <a href="javascript:;">新品首发</a>
+                                <a href="javascript:;">京东金融</a>
+                                <a href="javascript:;">全球售</a>
+                                <a href="javascript:;">国际站</a>
+                            </li>
+                            <li>
+                                <a href="javascript:;">京东会员</a>
+                                <a href="javascript:;">台湾售</a>
+                                <a href="javascript:;">俄语站</a>
+                                <a href="javascript:;">装机大师</a>
+                            </li>
+                            <li>
+                                <a href="javascript:;">港澳售</a>
+                                <a href="javascript:;">优惠劵</a>
+                                <a href="javascript:;">秒杀</a>
+                                <a href="javascript:;">闪购</a>
+                            </li>
+                            <li>
+                                <a href="javascript:;">印尼站</a>
+                                <a href="javascript:;">陪伴计划</a>
+                                <a href="javascript:;">出海招商</a>
+                                <a href="javascript:;">拍拍二手</a>
+                            </li>
+                            <li>
+                                <a href="javascript:;">买什么</a>
+                            </li>
+                        </ul>
+                        <ul class="flow">
+                            <li>
+                                <span>行业频道</span>
+                            </li>
+                            <li>
+                                <a href="javascript:;">手机</a>
+                                <a href="javascript:;">智能数码</a>
+                                <a href="javascript:;">电脑办公</a>
+                            </li>
+                            <li>
+                                <a href="javascript:;">家用电器</a>
+                                <a href="javascript:;">京东小家</a>
+                                <a href="javascript:;">京东服饰</a>
+                            </li>
+                            <li>
+                                <a href="javascript:;">京东生鲜</a>
+                                <a href="javascript:;">家装城</a>
+                                <a href="javascript:;">母婴</a>
+                            </li>
+                            <li>
+                                <a href="javascript:;">食品</a>
+                                <a href="javascript:;">农资频道</a>
+                                <a href="javascript:;">整车</a>
+                            </li>
+                            <li>
+                                <a href="javascript:;">图书</a>
+                                <a href="javascript:;">劳动防护</a>                            </li>
+                        </ul>
+                        <ul class="flow">
+                            <li>
+                                <span>生活服务</span>
+                            </li>
+                            <li>
+                                <a href="javascript:;">京东众筹</a>
+                                <a href="javascript:;">白条</a>
+                                <a href="javascript:;">京东金融App</a>
+                            </li>
+                            <li>
+                                <a href="javascript:;">京东小金库</a>
+                                <a href="javascript:;">理财</a>
+                                <a href="javascript:;">话费</a>
+                            </li>
+                            <li>
+                                <a href="javascript:;">水电煤</a>
+                                <a href="javascript:;">彩票</a>
+                                <a href="javascript:;">旅行</a>
+                            </li>
+                            <li>
+                                <a href="javascript:;">机票酒店</a>
+                                <a href="javascript:;">电影票</a>
+                                <a href="javascript:;">京东到家</a>
+                            </li>
+                            <li>
+                                <a href="javascript:;">游戏</a>
+                                <a href="javascript:;">拍拍回收</a>                            </li>
+                        </ul>
+                        <ul class="flow">
+                            <li>
+                                <span>更多精选</span>
+                            </li>
+                            <li>
+                                <a href="javascript:;">合作招商</a>
+                                <a href="javascript:;">京东通信</a>
+                                <a href="javascript:;">京东E卡</a>
+                            </li>
+                            <li>
+                                <a href="javascript:;">企业采购</a>
+                                <a href="javascript:;">服务市场</a>
+                                <a href="javascript:;">办公生活馆</a>
+                            </li>
+                            <li>
+                                <a href="javascript:;">校园加盟</a>
+                                <a href="javascript:;">京东社区</a>
+                                <a href="javascript:;">游戏社区</a>
+                            </li>
+                            <li>
+                                <a href="javascript:;">知识产权维护</a>
+                                <a href="javascript:;">关于我们</a>
+                            </li>
+                    </div>
+                </li>
+                <i>|</i>
+                <li class="bar">
+                    手机京东
+                </li>
+            </ul>
+        </div>
+    </div>
+</body>
+
+</html>

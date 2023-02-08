@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>京东轮播图</title>
+    <link rel="stylesheet" href="../reset.css">
+    <style>
+        /* 设置主体背景色，以便观察 */
+        body{
+            background-color: #bfa;
+        }
+        /* 设置底层盒子样式 */
+        div.slide{
+            /* 设置宽度 */
+            width: 590px;
+            /* 设置高度 */
+            height: 470px;
+            /* 设置整体水平居中 */
+            margin:50px auto;
+            /* 开启定位（为了后边子元素能够相对父元素使用绝对定位），
+            为了不让底层脱离文档流对其他元素造成影响，故选择相对定位 */
+            position: relative;
+        }
+        /* 设置图片样式 */
+        div.slide img{
+            /* 宽度与父元素一样 */
+            width: 100%;
+            /* 高度与父元素一样 */
+            height: 100%;
+            /* 开启绝对定位，这样可以让所有图片在底层盒子中摞起来，
+            等到后续可以使用JS脚本来实现轮播效果 */
+            position: absolute;
+        }
+        /* 设置图片上层白点的盒子的样式 */
+        div.point{
+            /* 开启绝对定位以在最上层显示 */
+            position: absolute;
+            /* 设置该元素层级为最高，以让其保持永远在最上边不会被盖住 */
+            z-index: 10;
+            /* 设置上和左偏移量调整白点盒子位置 */
+            top:430px;
+            left:20px;
+        }
+        /* 设置白点样式 */
+        div.point span{
+            /* 让span元素浮动，脱离文档流，span元素就可以水平排列且可以变为圆形 */
+            float: left;
+            /* 设置宽高 */
+            width: 16px;
+            height: 16px;
+            /* 以下都是为了设置模糊边框效果 */
+            border: 4px solid;
+            margin-right: 4px;
+            border-radius: 50%;
+            border-color: rgb(0,0,0,.2);
+            background-color: rgb(255,255,255,.5);
+            background-clip: content-box;
+        }
+        /* 设置鼠标移入白点时和白点轮播时白点的效果 */
+        div.point span.active,
+        div.point span:hover{
+            background-color: #fff;
+        }
+        /* 此时图片暂时不能进行轮播，需要添加JS脚本才能实现轮播 */
+    </style>
+</head>
+<body>
+    <div class="slide">
+        <div class="img1">
+            <a href="javascript:;">
+                <img src="../img/JD轮播图1.jpg" alt="img1">
+            </a>
+        </div>
+        <div class="img2">
+            <a href="javascript:;">
+                <img src="../img/JD轮播图2.jpg" alt="img2">
+            </a>
+        </div>
+        <div class="img3">
+            <a href="javascript:;">
+                <img src="../img/JD轮播图3.jpg" alt="img3">
+            </a>
+        </div>
+        <div class="img4">
+            <a href="javascript:;">
+                <img src="../img/JD轮播图4.jpg" alt="img4">
+            </a>
+        </div>
+        <div class="img5">
+            <a href="javascript:;">
+                <img src="../img/JD轮播图5.jpg" alt="img5">
+            </a>
+        </div>
+        <div class="img6">
+            <a href="javascript:;">
+                <img src="../img/JD轮播图6.webp" alt="img6">
+            </a>
+        </div>
+        <div class="img7">
+            <a href="javascript:;">
+                <img src="../img/JD轮播图7.webp" alt="img7">
+            </a>
+        </div>
+        <div class="img8">
+            <a href="javascript:;">
+                <img src="../img/JD轮播图8.webp" alt="img8">
+            </a>
+        </div>
+        <div class="point">
+            <span class="active"></span>
+            <span ></span>
+            <span ></span>
+            <span ></span>
+            <span ></span>
+            <span ></span>
+            <span ></span>
+            <span ></span>
+        </div>
+    </div>
+</body>
+</html>

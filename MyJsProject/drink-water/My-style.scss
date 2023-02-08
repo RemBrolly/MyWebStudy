@@ -1,0 +1,83 @@
+body{
+    background-color: #3494E4;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+    height: 100vh;
+}
+
+.h1{
+    font-size: 34px;
+    font-weight:900;
+}
+
+.h2{
+    font-size: 20px;
+}
+
+.bigcup{
+    height: 344px;
+    width: 140px;
+    background-color: white;
+    color: #144FC6;
+    display: flex;
+    flex-direction: column;
+    border: 4px #144FC6 solid;
+    border-radius: 0 0 45px 45px;
+    justify-content: flex-end;
+    overflow: hidden;
+}
+
+.topcup{
+    text-align: center;
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    .char{
+        font-size: 10px;
+    }
+    .num{
+        font-size: 20px;
+        font-weight: 900;
+    }
+    transition: 3s;
+}
+
+.botcup{
+    flex-grow: 10;
+    background-color: #3494E4;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-size: 30px;
+    font-weight: 900;
+}
+
+.holder{
+    display: flex;
+    flex-wrap: wrap;
+    width: 240px;
+    height: 200px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.smallcup{
+    background-color: white;
+    font-size: 13px;
+    color: #3494E4;
+    width: 42px;
+    height: 84px;
+    text-align: center;
+    border: 4px #144FC6 solid;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 0 0 15px 15px;
+}
+

@@ -1,0 +1,86 @@
+<!--可以使用快捷键：！+回车  让vscode快速生成html模板-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!--meta标签必须在head标签内部；meta标签内容不会显示在网页中，但经常会被机器（比如网页爬虫）解析，所以其可以用来优化搜索-->
+    <meta charset="UTF-8">                 <!--使用meta标签来指定文字编码格式-->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">         
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">    <!--使用meta标签让网页尺寸自适应；其中vieport就是代表自适应的属性值-->
+    <meta name = "keywords" contenct = "My first Web , PPCH , PP , CH " >   <!--提供网页关键字给搜索引擎-->
+    <meta name = "author" contenct = "PPCH">     <!--定义网页作者-->
+    <meta name = "description" contenct = "我自己的第一个网页设计" >   <!--描述网页内容，可以让浏览器优化搜索结果中对该网页的描述-->
+    <title>PPCH</title>
+    
+</head>
+<body>
+     <!--style标签指定html文档展示的样式，使用的是CSS样式表-->
+    <!--background设置背景颜色，text-align设置文本位置；color为设置字体颜色-->
+    <style> 
+        h2{
+            text-align:center;  
+            color:white ;
+        } 
+        span{   /*设置局部文本样式*/
+            color:pink ;
+        }
+        pre{
+            color: powderblue;
+        }
+    </style>
+    <!--使用link标签链接外部样式表-->
+    <link  rel = "stylesheet"  type = "text/css" href = "test.css">
+    <!--使用link标签来链接网站图标-->
+    <link rel = "icon" type = "image/x-icon" href = "logo.icon" >
+    <h2>      <!--定义标题大小有h1-h6-->
+        Welcome to <span>PPCH</span> !        <!--使用span标签设置局部文本样式-->
+    </h2>
+    <p>       <!--给其间的内容添加回车作为一个段落-->
+        This is my first page ! 
+    </p>
+    <!--img标签为在网页中嵌入一幅图片；其中alt指定图像无法显示时代替其的文本；src指定显示图像的URL；更多属性参见API文档-->
+    <img src = "../img/pikapika.png" alt = "PPCH Logo" height="256px" width="256px" >
+    <p>不懂的就百度一下：</p>
+    <!--a标签用于定义超链接，可以由该链接转移到另一个网页；href指定链接指向的URL；target指定链接打开方式-->
+    <a href = "https:\\www.baidu.com" target = _blank > 百度点这里哟！</a> <br><br><br>
+
+    <a href = "#p3" > 滚动到Lorem文字处 </a>
+
+    <!--下面演示pre标签的使用，在页面输出代码-->
+    <p>下面来展示一段JAVA代码：<br></p>
+    <pre>
+        import java.uilt;
+        public class Mian{
+            public static void main( String[] args ){
+                System.out.println( " Hello Word ! " ) ;
+            }
+        }
+    </pre>
+    <!--abbr语义化标签的使用(缩写）：-->
+    <p> <abbr title = "PPCH工作室"> PPCH.COM </abbr> not be found ! </p>
+    <p><abbr title = "World Trade Organization" > WTO  </abbr> 是世界贸易组织。 </p>
+    <!--下面演示使用ruby标签来给文字注音-->
+    <p>这四个字是生僻字，你不能用他们组成其他成语了！
+    <ruby>魑<rp>(</rp><rt>chī</rt><rp>)</rp></ruby>
+    <ruby>魅<rp>(</rp><rt>mèi</rt><rp>)</rp></ruby>
+    <ruby>魍<rp>(</rp><rt>wǎng</rt><rp>)</rp></ruby>
+    <ruby>魉<rp>(</rp><rt>liǎng</rt><rp>)</rp></ruby>
+    </p>
+    <!--下面用dbo标签让指定的文字从左往右输出-->
+    <p>
+        看我把上面四个生僻字从右往左写：<br>
+        <bdo dir = "rtl">        
+            <ruby>魑<rp>(</rp><rt>chī</rt><rp>)</rp></ruby>
+            <ruby>魅<rp>(</rp><rt>mèi</rt><rp>)</rp></ruby>
+            <ruby>魍<rp>(</rp><rt>wǎng</rt><rp>)</rp></ruby>
+            <ruby>魉<rp>(</rp><rt>liǎng</rt><rp>)</rp></ruby>
+        </bdo>
+    </p>
+    <ol>
+        Apple
+        <li>XiaoMi</li>
+        <li>HuaWei</li>
+    </ol>
+    <a href = "#" > 回到顶部 </a>
+    <p id = "p3" > Lorem ipsum, dolor sit amet consectetur adipisicing elit. Delectus nesciunt, id assumenda magni ratione nemo officia nisi excepturi cum nostrum aspernatur. Qui omnis in minus assumenda at? Ab, eligendi aperiam!</p>
+</body>
+</html> 

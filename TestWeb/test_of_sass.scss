@@ -1,0 +1,171 @@
+// 变量用法：使用$符号来定义变量，变量可以直接在选择器中使用，也可以变量套变量
+// 注意变量结束后需要使用分号，否则会出错
+$yanse:rgb(223,148,148) ;
+$taowa: 1px solid $yanse ;
+h1{
+    border:$taowa;
+    height:auto;
+}
+// 嵌套选择器：
+div{
+    height: 100px;
+    ul{
+        height: 80px;
+        li{
+            height: 50px;
+            &:hover{
+                color:#000;
+            }
+        }
+    }
+}
+// 伪类选择器：&符号表示当前该元素，例如使用伪类选择器时：
+div{
+    height: 100px;
+    ul{
+        height: 80px;
+        li{
+            height: 50px;
+            &:hover{ //这里转换为 li:hover
+                color:#000;
+            }
+        }
+    }
+}
+// 不止选择器可以嵌套，属性也可以使用嵌套：
+div{
+    height: 100px;
+    font:{
+        family:'fansong';
+        size:20px;
+        weight:700;
+    }
+}
+// mixin 混合（相当于预先写好了一组样式，其他地方直接引用）：
+// 基本语法：@mixin 样式名字 （参数1，参数2，...）{样式内容},参数可有可无
+@mixin hunhe {
+    color:red;
+    a{
+        font-size: 12px;
+    }   
+}
+div{
+    @include hunhe;
+}
+// mixin函数中有参数时，参数相当于你要赋予的值，所以参数名前需要使用$符号
+@mixin hunhe($one,$two) {
+    color:$one;
+    a{
+        color:$one;
+        font-size: $two;
+    }
+}
+div{
+    @include hunhe(red,15px);
+}
+// 下面这个写法和上面的div是一样的：
+div{
+    @include hunhe($two:15px,$one:red); 
+    // 这里使用参数名指定赋值就不需要考虑参数的位置了
+}
+
+// 继承/扩展，@extend关键字，一个选择器可以继承另一个选择器的全部样式
+.one{
+    color:#000;
+}
+.one{
+    a{
+        font-size: 10px;
+    }
+}
+.two{
+    @extend .one ;
+    background-color: #fff;
+}
+// 使用@import引入一个.scss后缀的文件最为自己的一部分，被引入的那个并不会转换成
+// .css格式的，所以此文件命名要注意以下划线开头，如：_base.scss，
+// 语法：@import "......文件路径" ，例如这里引入的是一个叫_base.scss的文件：
+@import "_base.scss" ; // 引用后base.scss的样式表的内容会全部复制过来
+
+// 计算功能:可以在代码中使用运算符计算
+$chang:20px;
+body{
+    margin:(10px*2);
+    left:20px + $chang ;
+}
+
+// 颜色函数,sass提供了一些内置的颜色函数,以便生成系列颜色,这些颜色函数的用法都类似
+// hsl()函数:hsl(色相,饱和度,亮度,不透明度) ;其中最后一个是可选的
+// lighten(颜色,增加亮度的百分比)函数:调整颜色亮度
+// darken(颜色,增加暗度的百分比)函数:与lighten相反,调整颜色暗度
+// saturate(颜色,百分比)函数:调整颜色纯度
+// desaturate(颜色,百分比)函数:与saturate相反,调整颜色不纯度
+body{
+    background-color: hsl(5,20%,20%);
+    color:darken(rgb(228,145,145),50%);
+    border-color: saturate(hsl(5,20%,20%),40%);
+}
+
+// 把一个值插入到另一个值,#{变量} :
+$yanse:color;
+body{
+    #{$yanse}:red;
+}
+
+// if判断：
+$jia: false;
+body{
+    @if false{
+        color:red;
+    }
+    @if 2>3{
+        background-color: white;
+    }
+    @else{
+        background-color: black;
+    }
+}
+
+// for循环：for 变量 from 开始值 to 结束值{....}   迭代至结束值不会执行循环体内容
+// for 变量 from 开始值 through 结束值{....} 迭代至结束值时会执行循环体内容
+@for $i from 1 through 3 {
+ .div#{$i}{
+     height: $i*20px;
+ }   
+}
+
+// 列表循环,能遍历一个列表的值,列表相当于数组:@each 变量 in 列表{....}
+$yanse:red blue black ;
+@each $i in $yanse{
+    .div#{$i}{
+        color:$i ;
+    }
+}
+
+// while循环,增加了判断条件:@while 条件{....}
+$gao:1;
+@while $gao<4 {
+    .div#{$gao}{
+        height:$gao*10px;
+    }
+    $gao:$gao+1;
+}
+
+// 自定义函数：@function
+@function ziji ($bian) {
+    @return $bian+10px;
+}
+.div{
+    width: ziji(5px);
+}
+
+
+
+
+
+
+
+
+
+
+
